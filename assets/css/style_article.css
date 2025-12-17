@@ -38,6 +38,10 @@ p {
     margin: 0 0 24px;
 }
 
+
+
+
+
 /* ================= HERO ================= */
 
 .hero-section {
@@ -46,9 +50,7 @@ p {
     gap: 10px;
     padding-left: 51px;
     padding-top: 40px;
-    background-color: #f5f5f5;
     margin-bottom: 30px;
-    flex-wrap: wrap;
 }
 
 .hero-section > div {
@@ -63,12 +65,34 @@ p {
 }
 
 .hero-section img {
-    width: clamp(600px, 50vw, 600px);
+    width: clamp(600px, 300vw, 600px);
     height: auto;
     display: block;
     margin-left: auto;
     margin-top: 100px;
 }
+
+
+
+/* ================= SEPARATOR GREEN ================= */
+
+.hero-section {
+  position: relative;
+  z-index: 2;
+}
+
+.separator-green{
+  width: 90vw;
+  height: 200px;
+  background-color: #2c6e56;
+
+  margin-top: -120px;
+  margin-bottom: 80px;
+
+  position: relative;
+  z-index: 1;
+}
+
 
 /* ================= SECTIONS EXPOSITION ================= */
 
@@ -128,25 +152,82 @@ p {
     display: block;
 }
 
-/* ================= RESPONSIVE ================= */
 
-@media (max-width: 1400px) {
+/* ================= RESPONSIVE ================= */
+/* ==================== HERO ==================== */
+@media (max-width: 900px) {
     .hero-section {
         flex-direction: column;
+        padding: 20px;
+        gap: 24px;
     }
 
-.hero-section img {
-    width: clamp(300px, 100%, 700px);
-    padding-right: 51px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    
+    .hero-section > div {
+        max-width: 100%;
+        flex-shrink: 1;
+    }
 
-
+    .hero-section img {
+        width: clamp(320px, 90vw, 800px);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+/* ================= RESPONSIVE ================= */
+/* ============ SECTIONS EXPOSITION ============ */
     .exposition-part {
         flex-direction: column;
-        gap: 40px;
-        margin-bottom: 80px;
+        padding: 20px;
+        gap: 24px;
+        margin: 0 auto 60px;
+    }
+
+    .image-shadow {
+        width: 100%;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .shadow-top-left::before,
+    .shadow-bottom-right::before {
+        top: 16px;
+        left: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 5px;
+    }
+
+    .hero-section,
+    .exposition-part {
+        padding: 5px;
+    }
+
+    .hero-section {
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(30px, 9vw, 44px);
+    }
+
+    .hero-section p {
+        font-size: clamp(16px, 4.5vw, 22px);
+    }
+
+    .hero-section img {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .exposition-part {
+        gap: 16px;
+        margin: 0 auto 40px;
     }
 
     .image-shadow {
@@ -155,7 +236,23 @@ p {
 
     .shadow-top-left::before,
     .shadow-bottom-right::before {
-        top: 20px;
-        left: 20px;
+        top: 10px;
+        left: 10px;
     }
+}
+
+/* ================= SEPARATOR GREEN ================= */
+@media (max-width: 900px){
+  .separator-green{
+    display: none;
+  }
+
+  .hero-image{
+    width: 100%;
+    height: auto;
+    display: block;
+
+    /* cadre vert qui "encadre" l'image */
+    box-shadow: 0 0 0 10px #2c6e56;
+  }
 }
