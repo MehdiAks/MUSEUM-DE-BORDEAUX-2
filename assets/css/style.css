@@ -18,7 +18,7 @@ body {
 @font-face {
     font-family: 'Strawford';
     src: url('fonts/strawford-regular-webfont.woff2') format('woff2'),
-         url('fonts/strawford-regular-webfont.woff') format('woff');
+        url('fonts/strawford-regular-webfont.woff') format('woff');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
