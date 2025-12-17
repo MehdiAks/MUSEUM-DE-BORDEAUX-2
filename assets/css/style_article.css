@@ -1,3 +1,17 @@
+/* ================= FONTS ================= */
+@font-face {
+    font-family: 'Strawford';
+    src: url('fonts/strawford-regular-webfont.woff2') format('woff2'),
+        url('fonts/strawford-regular-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1, h2, h3 {
+    font-family: 'Strawford', sans-serif;
+}
+
 body {
     background-color: #ffffff;
     font: 18px 'Figtree', sans-serif;
@@ -5,22 +19,22 @@ body {
 }
 
 h1 {
-    font-size: clamp(36px, 6vw, 60px);
+    font-size: clamp(36px, 6vw, 76px);
     color: #000000;
     margin: 0 0 10px;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: clamp(25px, 6vw, 30px);
     color: #000000;
     font-weight: bold;
     margin: 0 0 16px;
 }
 
 p {
-    font-size: 18px;
+    font-size: clamp(20px, 2vw, 18px);
     color: #333333;
-    line-height: 1.6;
+    line-height: 1.4;
     margin: 0 0 24px;
 }
 
@@ -29,25 +43,16 @@ p {
 .hero-section {
     display: flex;
     align-items: flex-start;
-    gap: 40px;
-    padding: 40px;
+    gap: 10px;
+    padding-left: 51px;
+    padding-top: 40px;
     background-color: #f5f5f5;
-<<<<<<< HEAD
-=======
     margin-bottom: 30px;
-    display: flex;
     flex-wrap: wrap;
 }
 
-.hero-section h1 {
-    font-size: 76px;
-    color: #000000;
->>>>>>> e70d14a5b9e45e094705a63e5d203a135fc01de1
-    margin-bottom: 10px;
-}
-
 .hero-section > div {
-    max-width: 600px;
+    max-width: 660px;
     flex-shrink: 0;
 }
 
@@ -58,7 +63,7 @@ p {
 }
 
 .hero-section img {
-    width: clamp(400px, 45vw, 1000px);
+    width: clamp(600px, 50vw, 600px);
     height: auto;
     display: block;
     margin-left: auto;
@@ -123,24 +128,19 @@ p {
     display: block;
 }
 
-.image-shadow::before,
-.image-shadow img {
-}
-
-
 /* ================= RESPONSIVE ================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
     .hero-section {
         flex-direction: column;
-        align-items: flex-start;
     }
 
-    .hero-section img {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 10px;
-    }
+.hero-section img {
+    width: clamp(300px, 100%, 700px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
     .exposition-part {
         flex-direction: column;
