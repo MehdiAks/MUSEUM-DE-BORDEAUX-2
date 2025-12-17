@@ -32,6 +32,17 @@ p {
     gap: 40px;
     padding: 40px;
     background-color: #f5f5f5;
+<<<<<<< HEAD
+=======
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hero-section h1 {
+    font-size: 76px;
+    color: #000000;
+>>>>>>> e70d14a5b9e45e094705a63e5d203a135fc01de1
     margin-bottom: 10px;
 }
 
