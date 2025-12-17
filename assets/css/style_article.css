@@ -130,7 +130,7 @@ p {
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width: 1400px) {
+@media (max-width: 1000px) {
     .hero-section {
         flex-direction: column;
     }
