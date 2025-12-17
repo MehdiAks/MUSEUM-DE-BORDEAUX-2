@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muséeum de Bordeaux</title>
-    <link rel="icon" href="images/Museum_fav_icon_V2.png" type="image/png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muséum de Bordeaux</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/Museum_fav_icon_V2.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap">
 </head>
-<header class="header">
-    <nav>
-        <ul>
-            <li><a href="#Accueil">Accueil</a></li>
-            <li><a href="/Expositions.html">Expositions</a></li>
-            <li><a href="/projets/versions/index.html">Événements</a></li>
-            <li><a href="/contact/versions/index.html">Actualités</a></li>
-            <li><a href="#Accueil">À propos</a></li>
-            <li><a href="/Expositions.html">Infos pratiques</a></li>
-            <li><a href="/projets/versions/index.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-<div class="rectangle"></div>
+
 <body>
-    <main class="main">
-        <article>
-            <div class="introduction">
-                <h1>Muséeum de Bordeaux</h1>
-                <p>Au Muséum de Bordeaux, explorez l’incroyable diversité de la nature à travers des collections uniques en botanique, zoologie et géologie, rassemblant plus d’un million de spécimens.</p>
-                <button>Découvrir</button>
-                <img src="images/Museum_vu_loin.jpg" alt="vue du muséum prise au loin">
-            </div>
-        </article>
-    </main>
+
+  <!-- En-tête -->
+  <header class="header">
+    <img class="logo" src="assets/images/logo long.png" alt="Logo du Muséum de Bordeaux">
+
+    <span class="separator"></span>
+
+    <div class="hoover-header">
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="Expositions.html">Expositions</a></li>
+          <li><a href="evenements.html">Événements</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="infos-pratiques.html">Infos pratiques</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main id="accueil" class="main">
+
+    <!-- Introduction -->
+    <article class="hero">
+      <img class="image_introduction" src="assets/images/Museum_vu_loin.jpg"
+        alt="Vue du Muséum de Bordeaux prise de loin">
+      <div class="encadre">
+        <h1>Muséum de <br>Bordeaux</h1>
+        <p>Au Muséum de Bordeaux, explorez l’incroyable diversité de la nature à travers des collections uniques en
+          botanique, zoologie et géologie, rassemblant plus d’un million de spécimens.</p>
+        <button type="button">Découvrir</button>
+      </div>
+    </article>
+
+  </main>
+
 </body>
+
 </html>

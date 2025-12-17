@@ -1,36 +1,142 @@
-html {
-    background-color: white;
-}
-body {
-    font-family: 'Figtree', sans-serif;
-}
-
-.header nav ul li {
-    border: 1px solid black;
-    display: inline;
-}
-
-.main{
-    display: block;
-}
-
 /* Définition de la font Strawford */
 @font-face {
     font-family: 'Strawford';
-    src: url('fonts/strawford-regular-webfont.woff2') format('woff2'),
-        url('fonts/strawford-regular-webfont.woff') format('woff');
-    font-weight: 200;
+    src: url('/assets/fonts/strawford-regular-webfont.woff2') format('woff2'),
+        url('/assets/fonts/strawford-regular-webfont.woff') format('woff');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
-h1, h2, h3 {
+@font-face {
+    font-family: 'Strawford';
+    src: url('/assets/fonts/strawford-regularitalic-webfont.woff2') format('woff2'),
+        url('/assets/fonts/strawford-regularitalic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+body {
+    background-color: #ffffff;
+    font: 18px 'Figtree', sans-serif;
+}
+
+/* Titre */
+h1 {
+    font-size: 60px;
+    font-family: 'Strawford', sans-serif;
+
+}
+/* Sous-titre */
+h2 {
+    font-size: 30px;
+    font-family: 'Strawford', sans-serif;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
     font-family: 'Strawford', sans-serif;
 }
 
-.rectangle {
-    width: 1440px;
-    height: 210px;
-    background-color: #2C6E56;
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Strawford', sans-serif;
 }
 
+/* Texte paragraphe */
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Section Introduction */
+
+.image_introduction {
+  width: 100%;
+}
+
+.encadre {
+    position: relative;
+    background-color: #2C6E56;
+    padding: 50px;
+    max-width: 500px;
+    color: white;
+    margin-top: -20%;
+    margin-left: 52%;
+}
+
+
+.encadre h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.encadre p {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.encadre button {
+    background-color: #2C6E56;
+    color: #ffffff;
+    border: solid 2px #D6BA59;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1% 0; 
+    background-color: #2C6E56;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    width: 15%;
+    max-width: 20vw;
+    height: auto;
+    margin-bottom: 0.8%;
+}
+
+/* Navigation */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    padding: 0;
+    margin: 0;
+}
+
+/* Liens */
+header nav ul li a {
+    color: white;
+    font-size: 1vw;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.separator {
+    width: 85%;
+    height: 0.08vh; 
+    background-color: white;
+    margin: 0.4% 0 0.6% 0;
+}
+
+.hoover-header nav ul li a:hover {
+    text-decoration: underline;
+}
