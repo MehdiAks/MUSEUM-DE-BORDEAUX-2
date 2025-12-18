@@ -2,35 +2,30 @@
     margin-top: 8%;
 }
 
-.titre-ligne{
+.titre-ligne {
     display: flex;
-    align-items: center;     /* aligne verticalement */
+    align-items: center;
     gap: 1rem;
-    padding-bottom: 10%;
 }
 
 .titre-ligne h2 {
-    margin-left: 2%;
-    margin-right: 2%;
-}
-
-.exposition-card h3 {
-    padding-bottom: 5%;
+    margin: 0;
+    white-space: nowrap;
+    font-size: clamp(32px, 6vw, 56px);
 }
 
 .separateur {
     flex-grow: 1;
-    height: 0.22rem;
+    height: 0.04rem;
     background-color: #000;
 }
 
 .exposition-card {
-    display: flex;           /* active le flex horizontal */
-    align-items: center;     /* centre verticalement le texte et l’image */
-    gap: 2%;                 /* espace entre texte et image */
-    margin-bottom: 3%;       /* espace entre les cartes */
-    flex-wrap: wrap;         /* permet la pile sur mobile */
-    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    margin-bottom: 3%;
+    flex-wrap: nowrap;
 }
 
 .exposition-text {
@@ -38,10 +33,20 @@
     padding-left: 3%;
 }
 
+.exposition-text h3 {
+    font-size: clamp(24px, 4vw, 40px);
+    margin-bottom: 12px;
+}
+
+.exposition-text p {
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.5;
+}
+
 .exposition-image {
     flex: 1 1 45%;
     background-color: #2C6E56;
-    padding: 5% 0% 0% 5%;
+    padding: 5% 0 0 5%;
     box-sizing: border-box;
 }
 
@@ -51,3 +56,47 @@
     display: block;
 }
 
+@media (max-width: 768px) {
+    .separateur {
+        display: none;
+    }
+
+    .exposition-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .exposition-image {
+        order: 2;
+        padding: 0;
+    }
+
+    .exposition-text {
+        order: 3;
+        padding-left: 0;
+    }
+
+    .titre-ligne h2 {
+        font-size: clamp(28px, 8vw, 42px);
+        margin-bottom: 5%;
+    }
+
+    .exposition-text h3 {
+        font-size: clamp(22px, 6vw, 32px);
+    }
+
+    .exposition-text p {
+        font-size: clamp(15px, 4vw, 18px);
+    }
+}
+
+.exposition-card button {
+    background-color: #2C6E56;
+    color: white;
+    border: solid 2px #D6BA59;
+    padding: clamp(10px, 2vw, 15px) clamp(20px, 4vw, 30px);
+    font-size: clamp(14px, 4vw, 18px);
+    cursor: pointer;
+    margin-top: 15px;
+}

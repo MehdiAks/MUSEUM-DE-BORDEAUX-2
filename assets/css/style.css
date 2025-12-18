@@ -23,11 +23,10 @@ body, html {
     font: 18px 'Figtree', sans-serif;
     margin: 0;
     padding: 0;
-    html, body {
-    height: 100%;
-    overflow: visible; /* ou auto, mais pas hidden */
-}
+    /* height: 100%; */
+    /* overflow: visible; ou auto, mais pas hidden */
 
+    /* overflow: hidden; */
 }
 
 /* ==================== TITRES ==================== */
@@ -79,11 +78,10 @@ p { font-size: 18px; line-height: 1.6; }
 
 /* Logo */
 .logo {
-    width: 15%;
-    max-width: 20vw;
-    height: auto;
-    margin-bottom: 0.8%;
+    width: clamp(180px, 35vw, 250px);
+    margin-bottom: 0;
 }
+
 
 /* Navigation */
 header nav ul {
@@ -224,11 +222,12 @@ header nav ul li a:hover {
 
 /* Menu mobile plein écran */
 .hoover-header {
-    position: fixed;   /* toujours au-dessus du contenu */
+    position: fixed;
     top: 0;
-    right: -120%;       /* caché complètement à droite, plus que 100% */
+    right: -120%;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    overflow-y: auto;
     background-color: #2C6E56;
     display: flex;
     flex-direction: column;
@@ -236,8 +235,10 @@ header nav ul li a:hover {
     align-items: center;
     padding: 40px 20px;
     z-index: 1400;
-    transition: right 0.4s ease-in-out; 
+    transition: right 0.4s ease-in-out;
+    overflow: hidden;
 }
+
 
 /* Menu actif */
 .hoover-header.active {

@@ -178,25 +178,28 @@ p {
     }
 }
 
+
 @media (max-width: 900px) {
     .hero-section {
         flex-direction: column;
-        padding: 20px;
-        gap: 24px;
-    }
-
-    
-    .hero-section > div {
+        padding: 0 10px; /* plus de padding fixe à gauche */
+        gap: 20px;
         max-width: 100%;
-        flex-shrink: 1;
+        box-sizing: border-box;
     }
 
     .hero-section img {
-        width: clamp(320px, 90vw, 800px);
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
+        width: 100%;
+        max-width: 100%;
+        margin: 10px auto 0 auto;
     }
+
+    .hero-section > div {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
 
     .hero-section h1 {
         font-size: clamp(30px, 9vw, 44px);
@@ -238,11 +241,25 @@ p {
 @media (max-width: 600px) {
     .exposition-part {
         flex-direction: column;
-        padding: 20px;
-        gap: 24px;
-        margin: 0 auto 60px;
+        gap: 20px;
+        padding: 0 10px;
+        margin: 0 auto 40px;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
+    .image-shadow {
+        width: 100%;
+        max-width: 100%;
+        flex-shrink: 1; /* autorise la réduction */
+    }
+
+    .image-shadow img {
+        width: 100%;
+        height: auto;
+    }
+}
+    
     .exposition-part img {
         box-shadow: 0 0 0 30px #2c6e56;
         width: 100%;
@@ -253,10 +270,6 @@ p {
         display: none;
     }
 
-    .image-shadow {
-        width: 100%;
-    }
-
     .shadow-top-left::before,
     .shadow-bottom-right::before {
         top: 16px;
@@ -264,5 +277,11 @@ p {
     }
     body {
         margin: 0%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
     }
 }
