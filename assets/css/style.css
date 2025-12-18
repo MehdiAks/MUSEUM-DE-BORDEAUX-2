@@ -23,7 +23,11 @@ body, html {
     font: 18px 'Figtree', sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* empêche le scroll horizontal */
+    html, body {
+    height: 100%;
+    overflow: visible; /* ou auto, mais pas hidden */
+}
+
 }
 
 /* ==================== TITRES ==================== */
@@ -66,11 +70,11 @@ p { font-size: 18px; line-height: 1.6; }
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1% 0; 
+    padding: 1% 0;
     background-color: #2C6E56;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 /* Logo */
@@ -90,7 +94,6 @@ header nav ul {
     margin: 0;
 }
 
-/* Liens */
 header nav ul li a {
     color: white;
     font-size: 1vw;
@@ -98,15 +101,14 @@ header nav ul li a {
     text-transform: uppercase;
 }
 
-/* Hover */
-.hoover-header nav ul li a:hover {
+header nav ul li a:hover {
     text-decoration: underline;
 }
 
 /* Ligne séparatrice */
 .separator {
     width: 85%;
-    height: 0.08vh; 
+    height: 0.08vh;
     background-color: white;
     margin: 0.4% 0 0.6% 0;
 }
@@ -166,12 +168,17 @@ header nav ul li a {
 @media (max-width: 768px) {
 
     /* Header layout */
-    .header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: clamp(10px, 2vw, 20px) 5%;
-    }
+.header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(10px, 2vw, 20px) 5%;
+    position: sticky; /* rend le header sticky */
+    top: 0;           /* reste en haut */
+    z-index: 1500;    /* au-dessus des autres éléments */
+    background-color: #2C6E56; /* à garder pour que le menu ne transparaisse pas dessous */
+}
+
 
     /* Logo */
     .logo {
@@ -180,20 +187,19 @@ header nav ul li a {
     }
 
     /* Bouton burger */
-/* Bouton burger */
-.burger {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    border: none;
-    padding: 0;
-    font-size: 1rem;
-    color: white;
-    cursor: pointer;
-    z-index: 1500; /* plus grand que tout le header et menu */
-    position: relative; /* pour que z-index fonctionne */
-}
+    .burger {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        border: none;
+        padding: 0;
+        font-size: 1rem;
+        color: white;
+        cursor: pointer;
+        z-index: 1500;
+        position: relative;
+    }
 
     .burger-text {
         font-weight: bold;
@@ -216,24 +222,28 @@ header nav ul li a {
         border-radius: 2px;
     }
 
-    /* Menu mobile normal (pas plein écran) */
-    .hoover-header {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 200px;
-        background-color: #2C6E56;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
-        border-left: 1px solid #D6BA59;
-        z-index: 1200;
-    }
+/* Menu mobile plein écran */
+.hoover-header {
+    position: fixed;   /* toujours au-dessus du contenu */
+    top: 0;
+    right: -120%;       /* caché complètement à droite, plus que 100% */
+    width: 100%;
+    height: 100%;
+    background-color: #2C6E56;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    z-index: 1400;
+    transition: right 0.4s ease-in-out; 
+}
 
-    .hoover-header.active {
-        display: flex;
-    }
+/* Menu actif */
+.hoover-header.active {
+    right: 0;  /* il se déplace sur tout l'écran */
+}
+
 
     .hoover-header ul {
         list-style: none;
@@ -252,11 +262,15 @@ header nav ul li a {
         text-transform: uppercase;
         display: block;
         width: 100%;
+        text-align: left;
+        margin-left: 15%;
     }
 
     .hoover-header ul li a:hover {
         text-decoration: underline;
     }
+
+
 
     /* Encadré responsive */
     .encadre {
