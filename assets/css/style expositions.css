@@ -34,7 +34,7 @@
 }
 
 .exposition-text {
-    flex: 1 1 50%;           /* prend 50% ou plus selon l’espace */
+    flex: 1 1 50%;
     padding-left: 3%;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .exposition-image img {
-    width: 100%;             /* image responsive */
+    width: 100%;
     height: auto;
     display: block;
 }
