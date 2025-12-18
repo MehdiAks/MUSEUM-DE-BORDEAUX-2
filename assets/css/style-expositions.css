@@ -194,42 +194,6 @@
     flex-direction: row-reverse;
 }
 
-
-@media (max-width: 768px) {
-    .separateur {
-        display: none;
-    }
-
-    .exposition-card {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 16px;
-    }
-
-    .exposition-image {
-        order: 2;
-        padding: 0;
-    }
-
-    .exposition-text {
-        order: 3;
-        padding-left: 0;
-    }
-
-    .titre-ligne h2 {
-        font-size: clamp(28px, 8vw, 42px);
-        margin-bottom: 5%;
-    }
-
-    .exposition-text h3 {
-        font-size: clamp(22px, 6vw, 32px);
-    }
-
-    .exposition-text p {
-        font-size: clamp(15px, 4vw, 18px);
-    }
-}
-
 .exposition-card button {
     background-color: #2C6E56;
     color: white;
@@ -321,4 +285,131 @@
     padding: 15px 30px;
     font-size: 18px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    /* ==================== TRAITS ET RECTANGLES ==================== */
+    .separateur,
+    .exposition-image::before,
+    .evenement-image::before,
+    .evenement-image1::before,
+    .evenement-image2::before,
+    .evenement-image3::before,
+    .actualite-image::before {
+        display: none; /* Supprimer les séparateurs et rectangles verts */
+    }
+
+    /* ==================== EXPOSITIONS ==================== */
+    .exposition-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .exposition-image {
+        order: 2;
+        padding: 0;
+        width: 100%;
+    }
+
+    .exposition-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .exposition-text {
+        order: 3;
+        padding-left: 0;
+    }
+
+    .exposition-text h3 {
+        font-size: clamp(20px, 5vw, 28px);
+    }
+
+    .exposition-text p {
+        font-size: clamp(14px, 4vw, 16px);
+    }
+
+    .exposition-card button {
+        margin-bottom: 30px; /* espace sous le bouton */
+    }
+
+    /* ==================== ÉVÉNEMENTS ==================== */
+    .evenement-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .evenement-image,
+    .evenement-image1,
+    .evenement-image2,
+    .evenement-image3 {
+        order: 2;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .evenement-image img,
+    .evenement-image1 img,
+    .evenement-image2 img,
+    .evenement-image3 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .evenement-text {
+        order: 3;
+        padding-left: 0;
+    }
+
+    .evenement-text h3 {
+        font-size: clamp(20px, 5vw, 28px);
+    }
+
+    .evenement-text p {
+        font-size: clamp(14px, 4vw, 16px);
+    }
+
+    .evenement-card button {
+        margin-bottom: 30px;
+    }
+
+    /* ==================== ACTUALITÉS ==================== */
+    .actualite-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .actualite-image {
+        order: 2;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .actualite-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .actualite-text {
+        order: 3;
+        padding-left: 0;
+    }
+
+    .actualite-text h3 {
+        font-size: clamp(20px, 5vw, 28px);
+    }
+
+    .actualite-text p {
+        font-size: clamp(14px, 4vw, 16px);
+    }
+
+    .actualite-card button {
+        margin-bottom: 30px;
+    }
 }
