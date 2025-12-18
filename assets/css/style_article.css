@@ -203,6 +203,19 @@ p {
         margin-top: 20px;
     }
 
+    .hero-section h1 {
+        font-size: clamp(30px, 9vw, 44px);
+    }
+
+    .hero-section p {
+        font-size: clamp(16px, 4.5vw, 22px);
+    }
+
+    .hero-section img {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
 /* ================= RESPONSIVE ================= */
 /* ============== SEPARATOR GREEN ============== */
 @media (max-width: 900px){
@@ -216,9 +229,14 @@ p {
     display: block;
 
     /* cadre vert qui "encadre" l'image */
-    box-shadow: 0 0 0 10px #2c6e56;
+    box-shadow: 0 0 0 30px #2c6e56;
     }
 }
+
+@media (max-width: 1380px) {
+    .separator-green{
+       margin-top: -85px;
+    }
 
 /* ================= RESPONSIVE ================= */
 /* ============ SECTIONS EXPOSITION ============ */
