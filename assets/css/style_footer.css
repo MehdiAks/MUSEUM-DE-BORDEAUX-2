@@ -93,4 +93,85 @@ h4 {
 
 }
 
-@media (max-width: 768px){}
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+
+    .footer {
+        height: 1010px; 
+        flex-direction: column;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        margin: 24px 20px 0;
+    }
+
+    .logo-court img {
+        margin: 0;
+        width: 180px;
+        height: auto;
+    }
+
+    .infos-pratiques {
+        margin-top: 0;
+    }
+
+    .infos-pratiques ul {
+        padding: 0;
+        margin: 0 0 18px 0;
+        list-style: none;
+    }
+
+    .infos-pratiques li {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .droite {
+        align-items: flex-start;
+        margin-left: 0;
+        gap: 20px;
+    }
+
+    .droite .encadrement button {
+        padding: 10px 18px;
+        font-size: 18px;
+        font-style: bold;
+    }
+
+    .droite p {
+        font-size: 24px;
+    }
+
+    .icon {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .logo-bdx {
+        margin-top: 8px;
+        margin-bottom: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        padding: 18px 20px 24px;
+    }
+
+    .footer-bottom a {
+        margin: 0;
+        font-size: 16px;
+        flex-direction: row;
+        
+    }
+}
