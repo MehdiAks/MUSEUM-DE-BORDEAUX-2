@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!------------------------------------------------------ HEADER ------------------------------------------------------->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orang Hutan</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/Museum_fav_icon_V2.png">
+
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style expositions.css">
     <link rel="stylesheet" href="assets/css/style_article.css">
     <link rel="stylesheet" href="assets/css/style_footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap">
 </head>
 
+
 <body>
+
+    <header class="header">
+        <img class="logo" src="assets/images/logo long.png" alt="Logo du Muséum">
+        <span class="separator"></span>
+        <button class="burger" aria-label="Ouvrir le menu">
+            <span class="burger-text">Menu</span>
+            <span class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        <nav class="hoover-header">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="evenements.html">Événements</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="infos-pratiques.html">Informations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!------------------------------------------------------ BODY ------------------------------------------------------->
+
     <div class="hero-section">
         <div>
             <h1>Orang Hutan</h1>
@@ -67,12 +101,6 @@
     </div>
 </body>
 
-
-
-
-
-
-
 <footer class="footer">
     <div class="container">
         <div class="footer-top">
@@ -121,3 +149,5 @@
         </div>
     </div>
 </footer>
+
+<script src="assets/js/animation.js"></script>

@@ -1,8 +1,8 @@
-/* Définition de la font Strawford */
+/* ==================== FONTS ==================== */
 @font-face {
     font-family: 'Strawford';
     src: url('/assets/fonts/strawford-regular-webfont.woff2') format('woff2'),
-        url('/assets/fonts/strawford-regular-webfont.woff') format('woff');
+         url('/assets/fonts/strawford-regular-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -11,56 +11,38 @@
 @font-face {
     font-family: 'Strawford';
     src: url('/assets/fonts/strawford-regularitalic-webfont.woff2') format('woff2'),
-        url('/assets/fonts/strawford-regularitalic-webfont.woff') format('woff');
+         url('/assets/fonts/strawford-regularitalic-webfont.woff') format('woff');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
 }
 
-
-body {
+/* ==================== BODY ==================== */
+body, html {
     background-color: #ffffff;
     font: 18px 'Figtree', sans-serif;
+    margin: 0;
+    padding: 0;
+    html, body {
+    height: 100%;
+    overflow: visible; /* ou auto, mais pas hidden */
 }
 
-/* Titre */
-h1 {
-    font-size: 60px;
-    font-family: 'Strawford', sans-serif;
-
-}
-/* Sous-titre */
-h2 {
-    font-size: 56px;
-    font-family: 'Strawford', sans-serif;
-    text-transform: uppercase;
 }
 
-h3 {
-    font-size: 48px;
-    font-weight: bold;
-    font-family: 'Strawford', sans-serif;
-}
+/* ==================== TITRES ==================== */
+h1 { font-size: 60px; font-family: 'Strawford', sans-serif; }
+h2 { font-size: 56px; font-family: 'Strawford', sans-serif; text-transform: uppercase; }
+h3 { font-size: 48px; font-weight: bold; font-family: 'Strawford', sans-serif; }
+h4 { font-size: 20px; font-weight: bold; font-family: 'Strawford', sans-serif; }
 
-h4 {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Strawford', sans-serif;
-}
+/* ==================== PARAGRAPHES ==================== */
+p { font-size: 18px; line-height: 1.6; }
 
-/* Texte paragraphe */
+/* ==================== IMAGE INTRO ==================== */
+.image_introduction { width: 100%; }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* Section Introduction */
-
-.image_introduction {
-  width: 100%;
-}
-
+/* ==================== ENCADRÉ SUR IMAGE ==================== */
 .encadre {
     position: relative;
     background-color: #2C6E56;
@@ -71,17 +53,8 @@ p {
     margin-left: 52%;
 }
 
-
-.encadre h1 {
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-
-.encadre p {
-    font-size: 20px;
-    margin-bottom: 50px;
-}
-
+.encadre h1 { font-size: 50px; margin-bottom: 30px; }
+.encadre p { font-size: 20px; margin-bottom: 50px; }
 .encadre button {
     background-color: #2C6E56;
     color: #ffffff;
@@ -91,18 +64,17 @@ p {
     cursor: pointer;
 }
 
-/* Header */
-
+/* ==================== HEADER ==================== */
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1% 0; 
+    padding: 1% 0;
     background-color: #2C6E56;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 /* Logo */
@@ -122,7 +94,6 @@ header nav ul {
     margin: 0;
 }
 
-/* Liens */
 header nav ul li a {
     color: white;
     font-size: 1vw;
@@ -130,13 +101,219 @@ header nav ul li a {
     text-transform: uppercase;
 }
 
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Ligne séparatrice */
 .separator {
     width: 85%;
-    height: 0.08vh; 
+    height: 0.08vh;
     background-color: white;
     margin: 0.4% 0 0.6% 0;
 }
 
-.hoover-header nav ul li a:hover {
-    text-decoration: underline;
+/* ==================== HERO SECTION ==================== */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    gap: 40px;
+}
+
+.hero-section img {
+    width: clamp(320px, 45vw, 800px);
+    height: auto;
+}
+
+.hero-section h1 { font-size: clamp(40px, 6vw, 60px); }
+.hero-section p { font-size: clamp(16px, 3vw, 22px); }
+
+/* ==================== SEPARATOR GREEN ==================== */
+.separator-green {
+    width: 85%;
+    height: 0.1vh;
+    background-color: #2c6e56;
+    margin: 1% auto;
+}
+
+/* ==================== SECTIONS EXPOSITION ==================== */
+.exposition-part {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 0 auto 60px;
+}
+
+.image-shadow {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shadow-top-left::before,
+.shadow-bottom-right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==================== BURGER MENU MOBILE ==================== */
+.burger { display: none; }
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+
+    /* Header layout */
+.header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(10px, 2vw, 20px) 5%;
+    position: sticky; /* rend le header sticky */
+    top: 0;           /* reste en haut */
+    z-index: 1500;    /* au-dessus des autres éléments */
+    background-color: #2C6E56; /* à garder pour que le menu ne transparaisse pas dessous */
+}
+
+
+    /* Logo */
+    .logo {
+        width: clamp(180px, 35vw, 250px);
+        margin-bottom: 0;
+    }
+
+    /* Bouton burger */
+    .burger {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        border: none;
+        padding: 0;
+        font-size: 1rem;
+        color: white;
+        cursor: pointer;
+        z-index: 1500;
+        position: relative;
+    }
+
+    .burger-text {
+        font-weight: bold;
+        color: white;
+    }
+
+    .burger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+    }
+
+    .burger-icon span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 2px;
+    }
+
+/* Menu mobile plein écran */
+.hoover-header {
+    position: fixed;   /* toujours au-dessus du contenu */
+    top: 0;
+    right: -120%;       /* caché complètement à droite, plus que 100% */
+    width: 100%;
+    height: 100%;
+    background-color: #2C6E56;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    z-index: 1400;
+    transition: right 0.4s ease-in-out; 
+}
+
+/* Menu actif */
+.hoover-header.active {
+    right: 0;  /* il se déplace sur tout l'écran */
+}
+
+
+    .hoover-header ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .hoover-header ul li a {
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-left: 15%;
+    }
+
+    .hoover-header ul li a:hover {
+        text-decoration: underline;
+    }
+
+
+
+    /* Encadré responsive */
+    .encadre {
+        max-width: 90%;
+        margin-left: 5%;
+        margin-top: clamp(-15%, -12vh, -20%);
+        padding: clamp(20px, 4vw, 40px);
+    }
+
+    .encadre h1 { font-size: clamp(28px, 6vw, 40px); }
+    .encadre p { font-size: clamp(14px, 4vw, 20px); margin-bottom: clamp(20px, 3vw, 40px); }
+    .encadre button { padding: clamp(10px, 2vw, 15px) clamp(20px, 4vw, 30px); font-size: clamp(14px, 4vw, 18px); }
+
+    /* Hero section */
+    .hero-section {
+        flex-direction: column;
+        padding: 20px;
+        gap: 24px;
+    }
+
+    .hero-section > div { max-width: 100%; flex-shrink: 1; }
+
+    .hero-section img { width: clamp(320px, 90vw, 800px); margin: 10px auto 0 auto; }
+
+    .hero-section h1 { font-size: clamp(30px, 9vw, 44px); }
+    .hero-section p { font-size: clamp(16px, 4.5vw, 22px); }
+
+    /* Exposition part */
+    .exposition-part {
+        flex-direction: column;
+        padding: 20px;
+        gap: 24px;
+        margin: 0 auto 60px;
+    }
+
+    .image-shadow { width: 100%; }
+
+    .shadow-top-left::before,
+    .shadow-bottom-right::before {
+        top: 16px;
+        left: 16px;
+    }
+
+    /* Ligne séparatrice mobile */
+    .separator { display: none; }
 }
