@@ -245,14 +245,13 @@ p {
 
     .exposition-part img {
         box-shadow: 0 0 0 30px #2c6e56;
-        
         width: 100%;
+        margin-bottom: 15px;
     }
 
-    .shadow-bottom-right::before {
+    .shadow-bottom-right::before , .shadow-top-left::before{
         display: none;
     }
-
 
     .image-shadow {
         width: 100%;
@@ -264,6 +263,6 @@ p {
         left: 16px;
     }
     body {
-        margin: 5px;
+        margin: 0%;
     }
 }
