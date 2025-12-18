@@ -144,7 +144,7 @@ p {
  /* Gestion des ombres */ 
 /* Image a gauche */
 .shadow-top-left::before {
-    bottom: 0;
+    top: -15%;
     left: -15%;
     width: 85%;
     aspect-ratio: 0.84;
@@ -211,6 +211,11 @@ p {
 }
 /* ============================ RESPONSIVE ============================ */
 /* ========================= SEPARATOR GREEN ========================= */
+@media (max-width: 1380px) {
+    .separator-green{
+        margin-top: -85px;
+    }
+}
 @media (max-width: 900px){
     .separator-green{
     display: none;
@@ -221,16 +226,11 @@ p {
     height: auto;
     display: block;
 
-    /* cadre vert qui encadre l'image */
+    /* remplacé l'ombre par le cadre vert */
     box-shadow: 0 0 0 30px #2c6e56;
     }
 }
 
-@media (max-width: 1380px) {
-    .separator-green{
-        margin-top: -85px;
-    }
-}
 /* ============================ RESPONSIVE ============================ */
 /* ======================= SECTIONS EXPOSITION ======================= */
 @media (max-width: 600px) {
@@ -239,6 +239,17 @@ p {
         padding: 20px;
         gap: 24px;
         margin: 0 auto 60px;
+    }
+
+    .exposition-part .image-shadow {
+        box-shadow: 0 0 0 30px #2c6e56;
+    }
+
+    .shadow-bottom-right::before {
+        display: none;
+        bottom: 0;
+        left: 0%;
+        width: 100%;
     }
 
     .image-shadow {
