@@ -1,4 +1,4 @@
-.container{
+.container {
     max-height: 500px;
 }
 
@@ -32,22 +32,8 @@ h4 {
     padding-right: 90px;
 }
 
-.info-pratiques{
-    display: flex;
-    align-items: center;
-    margin-left: 90px;
-}
-
-.info-pratiques ul {
-    margin-top: 0;
-    margin-left: 0px;
-}
-
-.info-pratiques li {
-    font-size: 24px;
-    list-style: none;
-    margin-left: 90px;
-    
+.infos-pratiques {
+    margin-top: 85px;
 }
 
 .droite {
@@ -67,7 +53,8 @@ h4 {
     cursor: pointer;
     font-style: bold;
 }
-.footer-bottom{
+
+.footer-bottom {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -79,10 +66,10 @@ h4 {
     color: white;
     font-size: 16px;
     margin: 0px;
-    
+
 }
 
-.droite p { 
+.droite p {
     margin: 0;
     font-size: 24px;
     font-weight: bold;
@@ -90,12 +77,12 @@ h4 {
     margin-right: 0;
 }
 
-.icon{
+.icon {
     display: flex;
     flex-direction: row;
 }
 
-.logo-bdx{
+.logo-bdx {
     display: flex;
     flex-direction: column;
     margin-left: auto;
@@ -106,3 +93,4 @@ h4 {
 
 }
 
+@media (max-width: 768px){}
