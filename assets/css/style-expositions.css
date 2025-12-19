@@ -282,6 +282,7 @@
 .encadre2 h2,
 .encadre2 h3 {
     font-family: 'Strawford', sans-serif;
+    font-weight: 500;
 }
 
 /* Paragraphe */
