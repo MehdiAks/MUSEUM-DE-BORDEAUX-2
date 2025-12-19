@@ -25,6 +25,16 @@ body, html {
     padding: 0;
 }
 
+.footer-button{
+    background-color: #2C6E56;
+    color: #ffffff;
+    border: solid 2px #D6BA59;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 /* ==================== TITRES ==================== */
 h1 { font-size: 60px; font-family: 'Strawford', sans-serif; }
 h2 { font-size: 56px; font-family: 'Strawford', sans-serif; text-transform: uppercase; }
