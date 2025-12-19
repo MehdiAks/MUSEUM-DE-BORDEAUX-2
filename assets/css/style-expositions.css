@@ -305,6 +305,10 @@
 
 @media (max-width: 768px) {
 
+    .actualite-card{
+        margin: 2rem 0;
+    }
+
     /* ==================== TRAITS ET RECTANGLES ==================== */
     .separateur,
     .exposition-image::before,
@@ -428,7 +432,8 @@
 
     .actualite-text {
         order: 3;
-        padding-left: 0;
+        padding-left: 4%;
+        padding-right: 8%;
     }
 
     .actualite-text h3 {
