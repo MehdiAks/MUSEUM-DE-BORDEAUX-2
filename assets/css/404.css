@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #2c6e56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centre-page {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1, h2, h3, h4, p {
+    color: #ffffff;
+    margin-top: 5%;
+}
+
+.button-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2c6e56;
+    color: #ffffff;
+    border: #D6BA59 solid 2px;
+    text-decoration: none;
+    margin-top: 5%;
+}
