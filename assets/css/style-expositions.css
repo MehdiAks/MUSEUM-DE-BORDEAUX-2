@@ -338,7 +338,8 @@
 
     .exposition-text {
         order: 3;
-        padding-left: 0;
+        padding-left: 4%;
+    padding-right: 8%;
     }
 
     .exposition-text h3 {
